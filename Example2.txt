@@ -1,2 +1,3 @@
 Second Example of File Management in Python
 Appended text with write fun using r+ method
+Second Example of File Management in Python is appended using a+

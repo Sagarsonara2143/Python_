@@ -43,6 +43,15 @@ f.close()
 print("************************************************************")
 
 
+f = open("Example2.txt","a+")
+f.write("\nSecond Example of File Management in Python is appended using a+")
+f.seek(0)
+print(f.read())     # output is full content bcoz cursor on 1st index by default
+print("************************************************************")
+print(f.read())
+f.close()
+print("************************************************************")
+
 
 
 
