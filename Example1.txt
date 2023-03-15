@@ -1,0 +1,2 @@
+First Example of File Management in Python
+This is appended text
