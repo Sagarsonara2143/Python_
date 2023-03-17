@@ -1,6 +1,6 @@
-#n = int(input("Enter Value : "))
+n = int(input("Enter Value : "))
 
-'''
+
 for i in range(3,int(n/2)+1):
     if n % i == 0:
         print(n, " is not Prime Number")
@@ -11,9 +11,6 @@ else:
     print(n," is prime Number")
 
 '''
-
-
-
 n = int(input("Enter Staring Number : "))
 n1 = int(input("Enter Last Serial Number : "))
 s = input("Enter Odd for Odd Value or Even for Even Value : ")
@@ -30,3 +27,4 @@ for i in range(n,int(n1+1)):
         print("Invalid Output")
         break
     
+'''
