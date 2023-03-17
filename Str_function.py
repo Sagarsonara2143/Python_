@@ -33,6 +33,7 @@ print("2143.52".isnumeric())    # Is str have digit only result - False for . en
 print(" ".isspace())            # Is str have space only result - True
 print(" S S".isspace())         # Is str have space only result - False
 
+print(str.replace("Python","java"))
 
 
 
