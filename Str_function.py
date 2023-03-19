@@ -1,7 +1,6 @@
 str = "Python Programming"
 
 print(str)
-
 print(str.capitalize())         # First Word Capetilize -- Python programming --
 print(str.casefold())           # Lower case - python programming --
 print(str.lower())              # Lower case - python programming --
@@ -38,7 +37,7 @@ print(str.replace("Python","java"))
 
 
 
-
+    
 
 
 
