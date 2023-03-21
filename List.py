@@ -67,7 +67,8 @@ print(l)
 l.sort()            # Sort Word by alpabetically
 print(l)
 
-
+for i in range (len(l)):
+    print(l[i])
 
 
 
