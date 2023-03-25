@@ -42,4 +42,19 @@ e_mobile = Entry(root)
 e_mobile.place(x=200,y=250)
 
 
+#Button Creation
+insert=Button(root,text="INSERT",font=("Arial",11),fg="White",bg="Black")
+insert.place(x=50,y=300)
+
+search=Button(root,text="SEARCH",font=("Arial",11),fg="White",bg="Black")
+search.place(x=120,y=300)
+
+update=Button(root,text="UPDATE",font=("Arial",11),fg="White",bg="Black")
+update.place(x=197,y=300)
+
+delete=Button(root,text="DELETE",font=("Arial",11),fg="White",bg="Black")
+delete.place(x=272,y=300)
+
+
+
 
