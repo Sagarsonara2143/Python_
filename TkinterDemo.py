@@ -1,4 +1,16 @@
 from tkinter import *
+import mysql.connector      #mysql connector library
+
+#Connect to database
+
+def create_con():
+    return mysql.connector.connect(
+                host = "localhost",
+                user = "root",
+                password = "",
+                database = "python"
+        )
+print(create_con())
 
 root = Tk()                # it will open blank page
 root.geometry("400x400")    # it will open page in size of 500 X 500
