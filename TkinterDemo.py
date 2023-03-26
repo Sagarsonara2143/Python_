@@ -18,8 +18,21 @@ def create_con():
 def insert_data():
     if e_fname.get()=="" or e_lname.get()=="" or e_mobile.get()=="" or e_email.get()=="":
         msg.showinfo("Insert Status","All fields are Mandatory")
-         
+    else:
+        con = create_con()
+        cursor = con.cursor()
+        query = "insert into student (fname,lname,email,mobile) values (%s,%s,%s,%s)"
+        args = (e_fname.get(),e_lname.get(),e_email.get(),e_mobile.get())
+        cursor.execute(query,args)
+        con.commit()
+        con.close()
+        e_fname.delete(0,'end')
+        e_lname.delete(0,'end')
+        e_email.delete(0,'end')
+        e_mobile.delete(0,'end')
+        msg.showinfo("Insert Status","Data inserted successfully..!")
 
+        
 root = Tk()                                                                             # it will open blank page
 root.geometry("400x400")                                                    # it will open page in size of 400 X 400
 root.title("My First Tkinter Example")
@@ -64,7 +77,7 @@ e_mobile.place(x=200,y=250)
 
 
 #Button Creation
-insert=Button(root,text="INSERT",font=("Arial",11),fg="White",bg="Black")
+insert=Button(root,text="INSERT",font=("Arial",11),fg="White",bg="Black",command = insert_data)
 insert.place(x=50,y=300)
 
 search=Button(root,text="SEARCH",font=("Arial",11),fg="White",bg="Black")
