@@ -1,5 +1,6 @@
 from tkinter import *
 import mysql.connector      #mysql connector library
+import tkinter.messagebox as msg
 
 #Connect to database
 
@@ -10,12 +11,19 @@ def create_con():
                 password = "",
                 database = "python"
         )
-print(create_con())
+#print(create_con())            #call function to check code of function is execute or not
 
-root = Tk()                # it will open blank page
-root.geometry("400x400")    # it will open page in size of 500 X 500
+
+# Insert data to database (mySQL)
+def insert_data():
+    if e_fname.get()=="" or e_lname.get()=="" or e_mobile.get()=="" or e_email.get()=="":
+        msg.showinfo("Insert Status","All fields are Mandatory")
+         
+
+root = Tk()                                                                             # it will open blank page
+root.geometry("400x400")                                                    # it will open page in size of 400 X 400
 root.title("My First Tkinter Example")
-root.resizable(width=False,height=False)        # it will remove Maximise symbol from web page 
+root.resizable(width=False,height=False)                            # it will remove Maximise symbol from web page 
 
 
 
