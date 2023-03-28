@@ -35,6 +35,7 @@ def insert_data():
 
 #Search data from database
 def search_data():
+    
     if e_id.get() == "" :
         msg.showinfo("Search Status","Id is Mandatory to Search")
     else:
@@ -44,7 +45,12 @@ def search_data():
         args = (e_id.get(),)
         cursor.execute(query,args)
         row = cursor.fetchall()
-        print(row)
+        #print(row)
+        for i in row:
+            e_fname.insert(0,i[1])
+            e_lname.insert(0,i[2])
+            e_email.insert(0,i[3])
+            e_mobile.insert(0,i[4])
         con.close()
 
         
