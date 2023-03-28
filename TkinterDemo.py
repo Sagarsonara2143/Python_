@@ -35,6 +35,11 @@ def insert_data():
 
 #Search data from database
 def search_data():
+    e_fname.delete(0,'end')
+    e_lname.delete(0,'end')
+    e_email.delete(0,'end')
+    e_mobile.delete(0,"end")
+    #e_id.delete(0,"end")
     
     if e_id.get() == "" :
         msg.showinfo("Search Status","Id is Mandatory to Search")
@@ -46,11 +51,14 @@ def search_data():
         cursor.execute(query,args)
         row = cursor.fetchall()
         #print(row)
-        for i in row:
-            e_fname.insert(0,i[1])
-            e_lname.insert(0,i[2])
-            e_email.insert(0,i[3])
-            e_mobile.insert(0,i[4])
+        if row:
+            for i in row:
+                e_fname.insert(0,i[1])
+                e_lname.insert(0,i[2])
+                e_email.insert(0,i[3])
+                e_mobile.insert(0,i[4])
+        else:
+            msg.showinfo("Search Status","Opps..! ID is not found")
         con.close()
 
         
