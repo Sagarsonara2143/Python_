@@ -32,6 +32,21 @@ def insert_data():
         e_mobile.delete(0,'end')
         msg.showinfo("Insert Status","Data inserted successfully..!")
 
+
+#Search data from database
+def search_data():
+    if e_id.get() == "" :
+        msg.showinfo("Search Status","Id is Mandatory to Search")
+    else:
+        con = create_con()
+        cursor = con.cursor()
+        query = "Select * from student where id = %s"
+        args = (e_id.get(),)
+        cursor.execute(query,args)
+        row = cursor.fetchall()
+        print(row)
+        con.close()
+
         
 root = Tk()                                                                             # it will open blank page
 root.geometry("400x400")                                                    # it will open page in size of 400 X 400
@@ -80,7 +95,7 @@ e_mobile.place(x=200,y=250)
 insert=Button(root,text="INSERT",font=("Arial",11),fg="White",bg="Black",command = insert_data)
 insert.place(x=50,y=300)
 
-search=Button(root,text="SEARCH",font=("Arial",11),fg="White",bg="Black")
+search=Button(root,text="SEARCH",font=("Arial",11),fg="White",bg="Black",command = search_data)
 search.place(x=120,y=300)
 
 update=Button(root,text="UPDATE",font=("Arial",11),fg="White",bg="Black")
