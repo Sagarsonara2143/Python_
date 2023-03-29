@@ -90,8 +90,7 @@ def delete_data():
         cursor=con.cursor()
         query ="delete from student where id = %s"
         args=(e_id.get(),)
-        
-        ans=msg.askokcancel("Delete Status","please confirm for delete")
+        ans=msg.askokcancel("Delete Status","Please confirm for delete")
         if ans:
             cursor.execute(query,args)
             con.commit()
