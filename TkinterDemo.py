@@ -94,12 +94,12 @@ def delete_data():
         if ans:
             cursor.execute(query,args)
             con.commit()
-            msg.showinfo("Delete Status","The Data is deleted Successfully")
             e_id.delete(0,'end')
             e_fname.delete(0,'end')
             e_lname.delete(0,'end')
             e_email.delete(0,'end')
             e_mobile.delete(0,'end')
+            msg.showinfo("Delete Status","The Data is deleted Successfully")
         else:
             msg.showinfo("Delete Status","Data not deleted")
         cursor.close()
@@ -167,6 +167,6 @@ update.place(x=197,y=300)
 delete=Button(root,text="DELETE",font=("Arial",11),fg="White",bg="Black",command=delete_data)
 delete.place(x=272,y=300)
 
-
+root.mainloop()
 
  
