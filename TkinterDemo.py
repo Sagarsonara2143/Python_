@@ -90,15 +90,26 @@ def delete_data():
         cursor=con.cursor()
         query ="delete from student where id = %s"
         args=(e_id.get(),)
-        cursor.execute(query,args)
-        con.commit()
+        
+        ans=msg.askokcancel("Delete Status","please confirm for delete")
+        if ans:
+            cursor.execute(query,args)
+            con.commit()
+            msg.showinfo("Delete Status","The Data is deleted Successfully")
+            e_id.delete(0,'end')
+            e_fname.delete(0,'end')
+            e_lname.delete(0,'end')
+            e_email.delete(0,'end')
+            e_mobile.delete(0,'end')
+        else:
+            msg.showinfo("Delete Status","Data not deleted")
         cursor.close()
-        e_id.delete(0,'end')
-        e_fname.delete(0,'end')
-        e_lname.delete(0,'end')
-        e_email.delete(0,'end')
-        e_mobile.delete(0,'end')
-        msg.showinfo("Delete Status","ID is deleted successfully.!")
+        #e_id.delete(0,'end')
+        #e_fname.delete(0,'end')
+        #e_lname.delete(0,'end')
+        #e_email.delete(0,'end')
+        #e_mobile.delete(0,'end')
+        #msg.showinfo("Delete Status","ID is deleted successfully.!")
 
         
 root = Tk()                                                                             # it will open blank page
@@ -159,4 +170,4 @@ delete.place(x=272,y=300)
 
 
 
-
+ 
