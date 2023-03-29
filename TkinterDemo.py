@@ -98,6 +98,7 @@ def delete_data():
         e_lname.delete(0,'end')
         e_email.delete(0,'end')
         e_mobile.delete(0,'end')
+        msg.showinfo("Delete Status","ID is deleted successfully.!")
 
         
 root = Tk()                                                                             # it will open blank page
