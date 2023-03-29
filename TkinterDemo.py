@@ -26,7 +26,7 @@ def insert_data():
         cursor.execute(query,args)
         con.commit()
         con.close()
-        e_fname.delete(0,'end')
+        e_fname.delete(0,'end') 
         e_lname.delete(0,'end')
         e_email.delete(0,'end')
         e_mobile.delete(0,'end')
@@ -81,6 +81,23 @@ def update_data():
         msg.showinfo("Update Status","Data Updated Successfully")
         
        
+#Delete data
+def delete_data():
+    if e_id.get()=="":
+        msg.showinfo("Delete Status","ID is mandatory to delete data")
+    else:
+        con = create_con() 
+        cursor=con.cursor()
+        query ="delete from student where id = %s"
+        args=(e_id.get(),)
+        cursor.execute(query,args)
+        con.commit()
+        cursor.close()
+        e_id.delete(0,'end')
+        e_fname.delete(0,'end')
+        e_lname.delete(0,'end')
+        e_email.delete(0,'end')
+        e_mobile.delete(0,'end')
 
         
 root = Tk()                                                                             # it will open blank page
@@ -136,7 +153,7 @@ search.place(x=120,y=300)
 update=Button(root,text="UPDATE",font=("Arial",11),fg="White",bg="Black",command=update_data)
 update.place(x=197,y=300)
 
-delete=Button(root,text="DELETE",font=("Arial",11),fg="White",bg="Black")
+delete=Button(root,text="DELETE",font=("Arial",11),fg="White",bg="Black",command=delete_data)
 delete.place(x=272,y=300)
 
 
