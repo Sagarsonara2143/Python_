@@ -2,6 +2,7 @@ from tkinter import *
 import mysql.connector      #mysql connector library
 import tkinter.messagebox as msg
 
+
 #Connect to database
 
 def create_con():
@@ -112,11 +113,10 @@ def delete_data():
 
         
 root = Tk()                                                                             # it will open blank page
+
 root.geometry("400x400")                                                    # it will open page in size of 400 X 400
 root.title("My First Tkinter Example")
 root.resizable(width=False,height=False)                            # it will remove Maximise symbol from web page 
-
-
 
 #Create a Label and place in root
 
