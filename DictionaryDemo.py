@@ -5,6 +5,7 @@ Dict Changable and not allowed Duplicates Value.
 
 dict = {12:"Sagar",15:"Raj",20:"Sanjay",25:"Manish"}
 
+
 print(dict)         #Dictionary Print in Curly bracket
 
 #dict.clear()       # Clear Dict
