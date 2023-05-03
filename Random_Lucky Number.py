@@ -25,6 +25,6 @@ for i in range(10):
     lucky.append(num)
     l.remove(num)
 
-print('Total List without Lucky Numbers ',l,"\n\n")
+print('Total List without Lucky Numbers ',l,"\n")
 print('Lucky Numbers are ',lucky)
 
