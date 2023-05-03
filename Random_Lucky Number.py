@@ -6,7 +6,7 @@ choice will findout number from given List   '''
 
 import random
 
-#print(random.randint(1,101))
+print(random.randint(1,101))
 
 #print(random.choice([1,11,21,51,101]))
 
