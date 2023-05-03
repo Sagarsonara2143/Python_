@@ -6,7 +6,7 @@ choice will findout number from given List   '''
 
 import random
 
-print(random.randint(1,101))
+#print(random.randint(1,101))
 
 #print(random.choice([1,11,21,51,101]))
 
@@ -25,6 +25,6 @@ for i in range(10):
     lucky.append(num)
     l.remove(num)
 
-print('Total List without Lucky Numbers ',l)
+print('Total List without Lucky Numbers ',l,"\n\n")
 print('Lucky Numbers are ',lucky)
 
