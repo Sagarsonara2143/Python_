@@ -14,7 +14,7 @@ def create_con():
         )
 #print(create_con())            #call function to check code of function is execute or not
 
-
+    
 # Insert data to database (mySQL)
 def insert_data():
     if e_fname.get()=="" or e_lname.get()=="" or e_mobile.get()=="" or e_email.get()=="":
@@ -64,7 +64,7 @@ def search_data():
 
 # Update data
 def update_data():
-    if e_id.get()=="" or e_fname.get()=="" or e_lname.get()=="" or e_email.get()=="" or e_mobile=="":
+    if e_id.get()=="" or e_fname.get()=="" or e_lname.get()=="" or e_email.get()=="" or e_mobile.get()=="":
         msg.showinfo("Update Status","All fields are Mandatory")
     else:
         con = create_con()

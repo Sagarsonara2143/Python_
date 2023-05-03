@@ -6,10 +6,10 @@
 l = [10,20,"Tops",20.5,True,150,"Python",300,"Java",False,85.5,100,True,11,22,330]
 #    16 15    14    13   12  11    10     9    8      7   6    5   4    3  2   1    -
 
-'''
+
 print(len(l))
 print(l)
-
+'''
 print(l[5:15:4])        # Start with 5th Index to 15th Index and jump is 4
 
 print(l[:3:3])          # Start with 0 index to 3rd Index - Jump is 3
