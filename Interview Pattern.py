@@ -20,5 +20,7 @@ for i in range (1,10):
 '''
 
 for i in range(1,10):
-    print("*"*i," " *(10-i)*2,"*"*i)
-    
+    print("*"*i,"  " *(10-i)*2,"*"*i)
+
+for i in range(1,10):
+    print("" * i,"*"*(10-i),"  "*i,"*"*(10-i))
