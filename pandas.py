@@ -1,6 +1,5 @@
 import pandas as pd
 
-'''
 data={
     'student':['sagar','sanjay','Ansh'],
     'Marks':[95,97,88],
@@ -22,10 +21,4 @@ a=[10,15,20]
 var=pd.Series(a,index=["a","b","c"])        # Index is with arguments display labels in index - By default value of index is start from 0
 print(var)      
 print("Value of B Index : ",var["b"])       # We can find out data with index value
-'''
 
-calories = {"day1": 420, "day2": 380, "day3": 390}
-
-myvar = pd.Series(calories)
-
-print(myvar)
