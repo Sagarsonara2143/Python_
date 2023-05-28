@@ -1,5 +1,6 @@
 import pandas as pd
 
+'''
 data={
     'student':['sagar','sanjay','Ansh'],
     'Marks':[95,97,88],
@@ -23,3 +24,13 @@ print(var)
 print("Value of B Index : ",var["b"])       # We can find out data with index value
 '''
 '''
+'''
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+
+print(df)
