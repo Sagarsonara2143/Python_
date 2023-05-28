@@ -23,7 +23,7 @@ var
 print(var)      
 print("Value of B Index : ",var["b"])       # We can find out data with index value
 '''
-'''
+
 '''
 data = {
   "calories": [420, 380, 390],
@@ -33,4 +33,8 @@ data = {
 #load data into a DataFrame object:
 df = pd.DataFrame(data)
 
-print(df)
+print(df.loc[0])
+'''
+
+var=pd.read_csv('1.csv')
+print(var)
